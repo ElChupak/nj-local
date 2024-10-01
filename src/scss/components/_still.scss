@@ -1,0 +1,63 @@
+.still {
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    @include minitablet {
+        padding-block: 40px;
+    }
+
+    &__wrapper {
+        padding: 65px 126px 65px 126px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--color-primary);
+        border-radius: 24px;
+        box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.25);
+
+        @include tablet {
+            padding: 65px;
+        }
+
+        @include minitablet {
+            padding: 40px;
+        }
+
+        @include mobile {
+            padding: 15px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 35px;
+        font-weight: 700;
+        font-size: 37px;
+        line-height: 113%;
+        color: var(--color-tundora);
+        max-width: 650px;
+        letter-spacing: -2.1px;
+        text-align: center;
+        text-transform: capitalize;
+
+        @include minitablet {
+            font-size: 28px;
+            letter-spacing: -1px;
+
+        }
+
+        @include mobile {
+            font-size: 18px;
+            letter-spacing: 0;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__btn {
+        padding: 14px 50px;
+
+        @include mobile {
+            padding: 19px 60px;
+        }
+    }
+}

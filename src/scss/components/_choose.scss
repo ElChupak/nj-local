@@ -1,0 +1,210 @@
+.choose {
+    padding-top: 25px;
+    padding-bottom: 75px;
+
+    @include mobile {
+        padding-bottom: 30px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+
+        @include minitablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-inline: 17px;
+        padding: 57px 44px 105px;
+        max-width: 460px;
+        border: 1px solid var(--color-primary);
+        border-radius: 27px;
+        transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+
+        @include tablet {
+            margin-inline: 10px;
+            padding: 20px;
+            flex-basis: 340px;
+        }
+
+        @include minitablet {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &:hover {
+            transform: scale(101%);
+            box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__top {
+        position: relative;
+        min-height: 180px;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            width: calc(100% + 90px);
+            height: 2px;
+            background-color: #ccc;
+            transform: translateX(-50%);
+
+            @include tablet {
+                width: calc(100% + 40px);
+
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 23px;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 120%;
+        color: #07122b;
+
+        @include minitablet {
+            font-size: 28px;
+        }
+
+    }
+
+    &__mt {
+        margin-top: 48px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 134%;
+        color: #07122b;
+
+        @include minitablet {
+            font-size: 16px;
+        }
+    }
+
+    &__price {
+        position: absolute;
+        bottom: 0;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 120%;
+        color: var(--color-primary);
+
+        @include minitablet {
+            font-size: 21px;
+        }
+    }
+
+    &__option {
+        position: relative;
+        margin-bottom: 18px;
+        padding-left: 38px;
+        font-size: 15px;
+        line-height: 179%;
+        color: #07122b;
+
+        &-info {
+            cursor: pointer;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 0;
+            left: 0;
+            background-image: url('../img/big-check.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+
+        }
+
+        &:hover {
+            .choose__info {
+                color: var(--color-primary);
+            }
+
+            .choose__hint {
+                opacity: 1;
+            }
+        }
+
+        @include minitablet {
+            font-size: 14px;
+        }
+        
+    }
+
+    &__info {
+        position: relative;
+        color: #07122b;
+        transition: color .2s ease-in-out;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+
+    &__btn {
+        margin-top: 58px;
+        padding-block: 14px;
+        max-width: 420px;
+        width: 100%;
+        font-weight: 900;
+        font-size: 19px;
+        line-height: 175%;
+        text-transform: uppercase;
+
+        @include tablet {
+            margin-top: 10px;
+        }
+    }
+
+    &__hint-wrapper {
+        position: absolute;
+        top: -2px;
+        right: -10px;
+    }
+
+    &__hint {
+        position: relative;
+        opacity: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid var(--color-primary);
+        transition: opacity .2s ease-in-out;
+
+
+        &::after {
+            content: "                                    Through our partnership with Google, we're able to provide you with $500 in Google Ads credit when you spend $1,000 in Google Ads.";
+            position: absolute;
+            top: -110px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 92px;
+            font-size: 12px;
+            color: var(--color-light);
+            line-height: 120%;
+            font-weight: 400;
+            padding: 8px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: var(--color-primary);
+        }
+
+    }
+
+}

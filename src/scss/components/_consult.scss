@@ -1,0 +1,39 @@
+.consult {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    background-color: var(--color-lilac);
+
+    .template-item {
+        &__container {
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &__info {
+            max-width: 550px;
+        }
+
+        &__descr {
+            margin-bottom: 13px;
+        }
+
+        &__image {
+            padding-right: 60px;
+
+            @include tablet {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__btn {
+        padding: 16px 20px;
+        max-width: 330px;
+
+        @include minitablet {
+            margin: 0 auto;
+        }
+    }
+}

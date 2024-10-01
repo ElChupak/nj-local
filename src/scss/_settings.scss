@@ -1,0 +1,274 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.site-container {
+  overflow: hidden; // If you use position: sticky on your site, remove this setting.
+}
+
+.is-hidden {
+  display: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.centered {
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 90px;
+  max-width: 1420px;
+
+  @include middledesk {
+    padding: 0 45px;
+  }
+
+  @include minidesk {
+    padding: 0 15px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 16px 20px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform .3s ease-in-out, box-shadow .3s ease-in-out,;
+  flex-shrink: 0 ;
+
+
+  &:hover {
+    background-color: var(--color-active);
+    transform: scale(1.01);
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.25);
+
+  }
+
+  &:active {
+    background-color: var(--color-athens);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 112%;
+  color: var(--color-tundora);
+  text-align: center;
+
+  span {
+    color: var(--color-primary);
+  }
+
+  @include minitablet {
+    font-size: 34px;
+  }
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
+.descr {
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 22px;
+  line-height: 150%;
+  color: var(--color-gray);
+  text-align: center;
+  line-height: 125%;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.burger {
+  --burger-width: 40px;
+  --burger-height: 20px;
+  --burger-line-height: 2px;
+
+  position: absolute;
+  left: 20px;
+  top: 42px;
+  z-index: 1000;
+  display: none;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: var(--color-gray);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  border-radius: 4px;
+
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - var(--burger-line-height));
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: var(--color-gray);
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 4px;
+
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: var(--color-primary);
+  height: 3px;
+}
+
+.burger--active::after {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: var(--color-primary);
+  height: 3px;
+
+}
+
+.burger--active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger:focus::after {
+  opacity: 1;
+}
+
+// .overlay {
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   z-index: 200;
+//   background-color: rgba(#000, 0.6);
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+//   &--active {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
+
+// .modal {
+//   @include mobile {
+//     &::before {
+//       display: none;
+//     }
+//   }
+// }
+
+// .site-modal {
+//   @include mobile {
+//     padding: 20px;
+//     padding-top: 40px;
+//     width: 90%;
+//   }
+// }

@@ -1,0 +1,63 @@
+.claim {
+    padding-top: 100px;
+    padding-bottom: 84px;
+
+    @include minitablet {
+        padding: 50px 0 50px;
+    }
+
+    @include mobile {
+       display: none;
+    }
+
+    &__wrapper {
+        padding: 79px 126px 79px 126px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url('../img/bg/claim-bg.webp');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        @include middledesk {
+            padding-inline: 79px;
+        }
+
+        @include minitablet {
+            padding: 50px;
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 113%;
+        color: var(--color-tundora);
+        max-width: 600px;
+        letter-spacing: -2.1px;
+
+        @include minidesk {
+            font-size: 48px;
+            max-width: 550px;
+        }
+
+        @include tablet {
+            font-size: 36px;
+        }
+
+        @include minitablet {
+            font-size: 28px;
+        }
+
+    }
+
+    &__btn {
+        padding: 14px 22px;
+        margin-left: 10px;
+
+        @include minitablet {
+           padding: 22px 10px;
+        }
+    }
+}

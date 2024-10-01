@@ -1,0 +1,63 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы (большие компоненты)
+@import "./components/template-item";
+@import "./components/card";
+
+
+
+// компоненты страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/work";
+@import "./components/consult";
+@import "./components/data";
+@import "./components/company";
+@import "./components/claim";
+@import "./components/hero-get";
+@import "./components/wedo";
+@import "./components/team";
+@import "./components/how";
+@import "./components/onboard";
+@import "./components/tech";
+@import "./components/ads";
+@import "./components/best";
+@import "./components/seo";
+@import "./components/boost";
+@import "./components/hero-pricing";
+@import "./components/choose";
+@import "./components/faq";
+@import "./components/still";
+
+
+
+
+
+@import "./components/footer";
+
+
+
+
+
+
+
+
+
+// подключения компонентов страницы (маленькие компоненты)
+// @import "./components/common/nav";
+// @import "./components/common/header-contacts";
+// @import "./components/home/video-block";
+// @import "./components/common/form-field";
+// @import "./components/common/breadcrumbs";
+// @import "./components/common/learn-more";
+// @import "./components/common/social";
+
+
+
+
+
+

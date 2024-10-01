@@ -1,0 +1,44 @@
+.hero--pricing {
+    padding-top: 0;
+    padding-bottom: 75px;
+    background-image: none;
+
+    @include mobile {
+        padding-bottom: 35px;
+    }
+
+    .header {
+        background: transparent;
+        background-color: transparent   ;
+        margin-bottom: 95px;
+        border-bottom: 1px solid #dedede;;
+
+        @include mobile {
+            margin-bottom: 35px;
+        }
+    }
+
+    .hero__title {
+        color: var(--color-tundora);
+    }
+
+    .hero__subtitle {
+        margin: 0 auto;
+        max-width: 500px;
+        color: var(--color-gray);
+        font-weight: 400;
+        font-size: 35px;
+
+        &-pricing {
+            @include minitablet {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            @include mobile {
+                font-size: 22px;
+                line-height: 28px;
+            }
+        }
+    }
+}

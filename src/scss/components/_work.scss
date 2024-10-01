@@ -1,0 +1,8 @@
+.work {
+    padding-top: 96px;
+    padding-bottom: 90px;
+
+    @include minitablet {
+        padding: 40px 0 40px;
+    }
+}

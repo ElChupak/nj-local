@@ -1,0 +1,74 @@
+.hero {
+    position: relative;
+    padding-block: 190px;
+    max-height: 650px;
+    background-image: url('../img/bg/hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include minitablet {
+        padding-block: 80px;
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 850px;
+        text-align: center;
+
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 18px;
+        padding-top: 5px;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 60px;
+        color: var(--color-light);
+        letter-spacing: -0.03em;
+
+        span {
+            color: var(--color-primary);
+        }
+
+        @include minitablet {
+            font-size: 46px;
+            line-height: 55px;
+        }
+
+        @include mobile {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--color-light);
+        line-height: 150%;
+        letter-spacing: -0.3px;
+        margin-bottom: 17px;
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    &__btn {
+        padding: 14px 34px;
+        margin-bottom: 5px;
+
+        @include mobile {
+            padding: 20px 12px;
+        }
+    }
+
+    &--get {
+        background-image: url('../img/bg/get-bg.webp');
+    }
+}

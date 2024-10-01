@@ -1,0 +1,121 @@
+.faq {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    @include minitablet {
+        padding-bottom: 30px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 995px;
+    }
+    &__column {
+        padding: 0 45px 0 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include minitablet {
+            padding: 0;
+        }
+    }
+    &__title {
+        margin: 0 auto;
+        margin-bottom: 42px;
+        font-weight: 700;
+        font-size: 32px;    
+        line-height: 129%;
+        max-width: 490px;
+        color: #03363d;
+    }
+    &__subtitle {
+        color: #212121;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 200;
+        margin-left: 20px;
+    }
+    &__accordion {
+        position: relative;
+        padding-bottom: 15px;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 96%;
+            height: 1px;
+            background-color: var(--color-gray);
+            transform: translateX(-50%);
+        }
+    }
+    &__question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px 0 20px;
+
+        svg {
+            width: 37px;
+            height: 37px;
+            fill: var(--color-gray);
+            transition: transform .5s ease-in;
+            flex-shrink: 0;
+            
+            @include minitablet {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        h3 {
+            color: #03363d;
+            font-size: 22px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+
+            @include minitablet {
+                font-size: 18px;
+            }
+        }
+    }
+    &__answer {
+        padding: 0 20px 0 20px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .5s ease-in-out;
+        p {
+            color: var(--color-gray);
+            font-size: 20px;
+            font-weight: 300;
+            padding: 10px;
+
+            @include minitablet {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.open .faq__answer {
+    max-height: 300px;
+    animation: fade .5s ease-in-out;
+}
+.open svg {
+    transform: rotate(180deg);
+}
+
+@keyframes fade {
+    from {
+       opacity: 0; 
+       transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

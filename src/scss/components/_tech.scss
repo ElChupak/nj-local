@@ -1,0 +1,25 @@
+.tech {
+    padding-top: 100px;
+    padding-bottom: 60px;
+
+    @include minitablet {
+        padding: 40px 0;
+    }
+
+    &__title {
+        margin-bottom: 65px;
+
+        @include minitablet {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__descr {
+        font-size: 22px;
+        line-height: 150%;
+
+        @include minitablet {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.best {
+    padding: 50px 0;
+
+    @include minitablet {
+        padding: 40px 0;
+    }
+
+    &__image {
+        max-width: 470px;
+    }
+
+    .template-item__info {
+        min-width: 600px;
+
+        @include tablet {
+            min-width: auto;
+        }
+    }
+
+    .template-item__container::before {
+        @include minitablet {
+            display: none;
+        }
+    }
+}

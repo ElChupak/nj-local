@@ -1,0 +1,42 @@
+.wedo {
+    padding-top: 126px;
+    padding-bottom: 90px;
+
+    @include tablet {
+        padding: 55px 0 35px;
+    }
+
+    @include mobile {
+        padding: 35px 0 15px;
+    }
+
+    &__title {
+        margin-bottom: 38px;
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    }
+
+
+    &__image {
+        background-image: url('../img/get/wedo-funnel-big.webp');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 595px;
+
+        @include tablet {
+            height: 455px;
+        }
+
+        @include minitablet {
+            background-image: url('../img/get/wedo-funnel-small.webp');
+            height: 440px;
+        }
+
+        @include mobile {
+            height: 240px;
+        }
+    }
+}

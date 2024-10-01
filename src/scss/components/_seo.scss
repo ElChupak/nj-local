@@ -1,0 +1,14 @@
+.seo {
+    padding: 50px 0 50px;
+    background-image: url('../img/bg/seo-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include minitablet {
+        padding: 40px 0;
+    }
+
+    .template-item__container::before {
+        display: none;
+    }
+}

@@ -1,0 +1,84 @@
+.company {
+    padding: 30px 0 38px;
+    background-image: url('../img/bg/company-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__bio {
+        padding-top: 7px;
+
+        @include tablet {
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+
+            @include mobile {
+                max-width: 120px;
+            }
+        }
+    }
+
+    &__image {
+        margin-bottom: 13px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--color-tundora);
+        text-align: center;
+        text-transform: capitalize;
+
+        span {
+            color: var(--color-primary);            
+        }
+    }
+
+    &__name {
+        margin-bottom: 6px;
+    }
+    
+    &__info {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__quote {
+        margin: 0;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 125%;
+        color: var(--color-tundora);
+        max-width: 640px;
+        text-transform: capitalize;
+        span {
+            color: var(--color-primary);            
+        }
+
+        @include tablet {
+            text-align: center;
+        }
+
+        @include minitablet {
+            font-size: 32px;
+        }
+
+        @include mobile {
+            font-size: 28px;
+        }
+    }
+}

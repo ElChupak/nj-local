@@ -1,0 +1,36 @@
+.boost {
+    padding: 50px 0 50px;
+
+    @include minitablet {
+        padding: 40px 0;
+    }
+
+    &__btn {
+       max-width: 300px; 
+       font-size: 18px;
+    }
+
+    .template-item {
+
+        &__info {
+            max-width: 530px;
+        }
+
+        &__descr {
+            margin-bottom: 20px;
+        }
+    }
+
+    .template-item__container::before {
+        @include minitablet {
+            display: none;
+        }
+    }
+
+    .template-item__info {
+        @include minitablet {
+            align-items: center;
+        }
+    }
+
+}

@@ -1,0 +1,17 @@
+.data {
+    padding-top: 81px;
+    padding-bottom: 70px;
+    background-color: transparent;
+
+    .template-item {
+        &__container {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    @include minitablet {
+        padding: 40px 0 40px;
+    }
+}

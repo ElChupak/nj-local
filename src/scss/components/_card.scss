@@ -1,0 +1,45 @@
+.card {
+    &__item {
+    cursor: pointer;
+    padding: 25px;
+    max-width: 400px;
+    height: 260px;
+    background-color: var(--color-lilac);
+    border: 1px solid rgba(136, 136, 136, 0.2);
+    border-radius: 25px;
+    transition: background-color .3s ease-in-out;
+
+        &:hover {
+            background-color: var(--color-sidecar);
+        }
+    }
+
+    &__header {
+        padding-top: 9px;
+        font-weight: 700;
+        font-size: 25px;
+        color: var(--color-tundora);
+        
+    }
+
+    &__info {
+        font-weight: 400;
+        font-size: 17px;
+        color: var(--color-gray);
+
+    }
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        background-color: var(--color-primary);
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 125%;
+        color: var(--color-black);
+        border-radius: 11px;
+    }
+}
