@@ -1,21 +1,29 @@
 .hero {
     position: relative;
-    padding-block: 190px;
     max-height: 650px;
-    background-image: url('../img/bg/hero-bg.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    // background-image: url('../img/bg/hero-bg.webp');
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
 
-    @include minitablet {
-        padding-block: 80px;
-    }
+    &__image {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }    
 
     &__wrapper {
+        padding-block: 190px;
         margin: 0 auto;
         max-width: 850px;
         text-align: center;
 
+        @include minitablet {
+            padding-block: 80px;
+        }
     }
 
     &__title {
